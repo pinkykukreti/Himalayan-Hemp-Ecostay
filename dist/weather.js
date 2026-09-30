@@ -1,0 +1,8 @@
+/* Property coordinates from the original website map; no visitor geolocation. */
+(async()=>{
+ const fields=[...document.querySelectorAll('[data-temperature]')];if(!fields.length)return;
+ const key='hhe-weather-30.0405-78.3727-v1';const now=Date.now();
+ function display(data){const entries=data?.properties?.timeseries;if(!Array.isArray(entries)||!entries.length)throw Error('No forecast');const nearest=entries.reduce((a,b)=>Math.abs(Date.parse(a.time)-Date.now())<Math.abs(Date.parse(b.time)-Date.now())?a:b);const temp=nearest.data?.instant?.details?.air_temperature;if(!Number.isFinite(temp)||Math.abs(Date.parse(nearest.time)-Date.now())>3*3600000)throw Error('Stale forecast');fields.forEach(el=>el.textContent=Math.round(temp)+'°C');const time=new Date(nearest.time).toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});document.querySelectorAll('[data-weather-time]').forEach(el=>el.textContent='Local estimate · '+time+' IST');}
+ try{let cached;try{cached=JSON.parse(localStorage.getItem(key));}catch{}if(cached?.expires>now){display(cached.data);return;}const response=await fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=30.0405&lon=78.3727',{signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('Weather unavailable');const data=await response.json();display(data);const expires=Math.max(Date.parse(response.headers.get('Expires'))||0,now+3600000);try{localStorage.setItem(key,JSON.stringify({expires,data}));}catch{}}
+ catch{fields.forEach(el=>el.textContent='Weather unavailable');document.querySelectorAll('[data-weather-time]').forEach(el=>el.textContent='Check the forecast before travelling');}
+})();
