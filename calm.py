@@ -37,7 +37,7 @@ for group,labels in original_labels.items():
     items=[('/original/img/'+group+'/'+f,label) for f,label in labels.items() if (root/'original'/'img'/group/f).is_file()]
     if group=='gallery':collections[0][2].extend(items)
     elif group=='activities':collections[2][2].extend(items)
-    else:collections.append(('Around the region','sightseen',items))
+    # Regional images remain in the nearby-attractions section, not the gallery.
 # One copy of each scene, including duplicates stored under different filenames.
 import hashlib
 omit={'/assets/room.jpg','/original/img/gallery/gal12.jpg','/original/img/gallery/gal14.jpg','/original/img/activities/farming.jpg','/original/img/activities/sunset.jpg','/original/img/activities/tent.jpg'}
