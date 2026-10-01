@@ -52,3 +52,7 @@ Google rating and excerpts are a dated, manually checked snapshot, not an automa
 
 ## GitHub
 No GitHub remote is configured in this checkout. Upload the project source, including `dist`, `build.py`, `premium.py`, `calm.py`, `refinements.py`, `home.html` and `images.json`, to your chosen repository. Do not upload credentials or temporary archives. Publish `dist` at a domain root. For GitHub Pages, prefer a custom domain or user site: a repository subpath requires adapting absolute asset and navigation paths.
+
+
+## Hemp living positioning — 1 October 2026
+`positioning.py` applies the latest headline, Experience Hemp page, three guest segments, builder trial stay and workshop enquiry options. Keep it with the other build modules. Farm access and the Experience Center are labelled planned. Update their status only when ready; no workshop dates or prices are invented.

@@ -61,3 +61,11 @@ When was the house built/rebuilt, and by whom? How many guests can comfortably s
 ## Website implementation in this revision
 
 Indigo/ivory/copper visual direction; all six existing room/interior/bathroom photos on Stay; gallery filters and clean captions; guestbook excerpt cards linked to original notes; structured retreat enquiry with date validation; social platform icons; explicit prohibitions; contrasting booking panel and footer. Direct email delivery remains deferred: the form prepares an email draft. One AI-enhanced interpretation is explicitly labelled beside the original; the remaining property photographs are unchanged. One original gallery file remains unavailable (gal13.jpg).
+
+
+## Hemp living launch sequence — 1 October 2026
+1. Pilot 2–3 night builder stays with an agreed quote for accommodation, meals and hosted time. Record actual questions and feedback; do not promise measured performance without measurements.
+2. Prepare the sample room: raw materials, wall sections, finishes, construction history and identified makers. Confirm its effect on accommodation capacity before opening.
+3. Prepare the licensed cultivation patch and seasonal visitor route. Confirm operational requirements for each planned activity separately.
+4. Announce a small number of facilitated workshops only after scope, facilitator, materials, capacity, fees and dates are agreed. Separate group activity times from quiet leisure stays.
+5. Track enquiry segment, source, dates, booking outcome, revenue, direct cost, contribution and qualified building follow-ups. Review monthly before expanding.
